@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Contains all the components */
+.body-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  gap: 15px;
+}
+
+/* Header on the top of the site */
+.site-header {
+  width: 100%;
+  text-align: center;
+  background-color: #e0f0ff;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Add shadow to components */
+.top-container,
+.chat-container,
+.settings-container,
+.tools-container,
+.comment,
+.answer,
+.site-header {
+  box-shadow: 0px 2.5px 2.5px #a9a9a9;
+}
+
+/* Top-level container for username input */
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0f0ff;
+  padding: 1em;
+  width: 30em;
+  height: 5em;
+}
+
+/* Contains username input & start button */
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0.75em;
+}
+
+/* Styling for the username input box */
+.input {
+  width: 15em;
+  height: 2em;
+  padding: 5px;
+  box-shadow: 0px 3px 3px #a9a9a9;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: 0;
+  border: 1px solid #00000080;
+}
+
+/* Styling for the Start/Stop button */
+.button {
+  width: 5em;
+  height: 2em;
+  padding: 5px;
+  border: 0;
+  background-color: #b3daff;
+  box-shadow: 0px 3px 3px #a9a9a9;
+
+  color: #ffff;
+
+  transition: 100ms ease-in-out;
+  box-sizing: border-box;
+  border: 0px solid #00000080;
+}
+
+.button:hover {
+  color: #000;
+  border: 1px solid #00000080;
+  cursor: pointer;
+}
+
+.start {
+  background-color: #5bb95d;
+}
+.stop {
+  background-color: #ff6666;
+}
+
+/* Container for the chat elements */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 30em;
+  padding: 1em;
+
+  background-color: #e0f0ff;
+}
+
+/* Makes chat container 0height if its empty */
+.chat-container:empty {
+  padding: 0;
+}
+
+/* Container for settings */
+.settings-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  padding: 1em;
+  gap: 10px;
+  background-color: #e0f0ff;
+}
+
+/* Container for setting item. Comment interval & Style */
+.settings-item {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  /* border: 2px solid black; */
+}
+
+/* Container for changing timeout (input & apply button) */
+.timeout {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.settings-item label {
+  padding: 0;
+  margin: 0;
+}
+.settings-item select {
+  width: 10em;
+  height: 2em;
+  text-align: center;
+  padding: 5px;
+  box-shadow: 0px 3px 3px #a9a9a9;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.settings-container button {
+  height: 2em;
+  padding: 5px;
+  border: 0;
+  background-color: #5bb95d;
+  box-shadow: 0px 3px 3px #a9a9a9;
+  color: #ffff;
+  transition: 100ms ease-in-out;
+  box-sizing: border-box;
+  border: 0px solid #00000080;
+}
+
+.settings-container button:hover {
+  color: #000;
+  border: 1px solid #00000080;
+}
+
+.settings-container input {
+  width: 4em;
+  height: 2em;
+  padding: 5px;
+  box-shadow: 0px 3px 3px #a9a9a9;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.settings-container input:focus {
+  outline: 0;
+  border: 1px solid #00000080;
+}
+
+.comment,
+.answer {
+  text-align: center;
+  padding: 0.25em;
+  width: 75%;
+  border-radius: 5px;
+}
+
+.comment {
+  background-color: #b3daff;
+  margin-left: auto;
+}
+
+.answer {
+  background-color: #d0e9f7;
+  margin-right: auto;
+}
+
+/* Container inside top-container (username header & connection status) */
+.header-container {
+  text-align: center;
+}
