@@ -18,6 +18,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "socket.io-client": "^4.6.1",
+    "socket.io": "^4.6.1",
     "tiktok-live-connector": "^1.0.3"
   },
   "scripts": {
