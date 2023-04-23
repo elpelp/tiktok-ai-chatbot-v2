@@ -7,6 +7,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
+require("dotenv").config();
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
@@ -18,12 +19,18 @@ function fetchAnswer(question, style) {
             const completion = yield openai.createChatCompletion({
                 model: "gpt-3.5-turbo",
                 messages: [
-                    { role: "system", content: `You're now answering to TikTok live comments with your style being: ${style}. Answer shortly.` },
-                    { role: "assistant", content: `I understand that my role is to be ${style}, and I will follow it strictly.` },
+                    {
+                        role: "system",
+                        content: `You're now answering to TikTok live comments with your style being: ${style}. Answer shortly.`,
+                    },
+                    {
+                        role: "assistant",
+                        content: `I understand that my role is to be ${style}, and I will follow it strictly.`,
+                    },
                     { role: "user", content: question },
                 ],
                 max_tokens: 100,
-                temperature: 0.25,
+                temperature: 0.5,
             });
             return completion.data.choices[0].message.content;
         }

@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "outDir": "./dist"
+  },
+  "include": [
+    "src/**/*", // include all TypeScript files in the "src" directory
+    "server.ts", // include server.ts
+    "gpt.ts" // include gpt.ts
+  ],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}

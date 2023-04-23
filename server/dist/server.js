@@ -18,7 +18,6 @@ const voice = require("elevenlabs-node");
 let useTextToSpeech = process.env.USE_TTS === "true";
 let ttsVoiceID = process.env.ELEVEN_LABS_VOICE_ID;
 const ttsApiKey = process.env.TTS_API_KEY; // Your API key from Elevenlabs
-// const voiceID = "MF3mGyEYCl7XYWbV9V6O"; // The ID of the voice you want to get
 const app = express();
 app.use(cors());
 const server = http.createServer(app);
