@@ -1,6 +1,6 @@
 # TikTok AI Chatbot V2
 
-Answers to a TikTok lives comments using AI and Text-To-Speech.
+Answers to a TikTok lives comments using OpenAI ChatGPT API and ElevenLabs Text-To-Speech.
 
 ## Installation
 
@@ -21,19 +21,32 @@ npm install
 
 
 ## Usage
-To start the frontend of the application, run the following command:
+### Setup
+To get started, begin by renaming the file called ``.env.template`` to ``.env``. <br> 
+Once you've done that, open the ``.env`` file and update the following variables: <br>
 
+``OPENAI_API_KEY``, set this to your OpenAI API key. <br>
+``USE_TTS``, set this to ``true`` if you want to use the Text-To-Speech functionality.<br>
+``TTS_API_KEY``, set this to your ElevenLabs API key. <br>
+``ELEVEN_LABS_VOICE_ID``, set this to the ElevenLabs voiceID you wish to use. <br>
+
+It's important to note that using the text-to-speech feature is optional. <br>
+If you'd prefer not to use it, you can simply leave the ``USE_TTS`` variable empty. <br>
+
+### Starting the application.
+Then you'll need to start the frontend of the application by running the following command: <br>
 ```bash
 npm run start
 ```
+This will start the React development server and launch the application in your default browser at `http://localhost:3000/`.  <br>
 
-This will start the development server and launch the application in your default browser at `http://localhost:3000/`.  <br>
-You can interact with the application from the browser.
 
-To start the Node.js backend of the application, run this command:
-
+To start the Node.js backend of the application, run this command: <br>
 ```bash
 node server/server.js
 ```
-
 This wil start the server so it can recieve comments from a TikTok Live and access OpenAI's API.
+
+## Dependencies
+[OpenAI ChatGPT API](https://platform.openai.com/docs/guides/chat): Used to generate natural language responses to comments in a TikTok live. <br>
+[ElevenLabs API](https://docs.elevenlabs.io/quickstart): Utilized for the Text-To-Speech feature, which enables the AI-generated responses to be read aloud.
